@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Couple Vacation Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌴 Couple Vacation Planner 💑</h1>
+        <p>Goal: Save RM 2000 by December 🎯</p>
+
+        <!-- Savings Tracker -->
+        <div class="savings-tracker">
+            <h2>💰 Monthly Savings Tracker</h2>
+            <div class="form-group">
+                <label for="month">Month:</label>
+                <select id="month">
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="yourSavings">Your Savings (RM):</label>
+                <input type="number" id="yourSavings" placeholder="Enter your savings">
+            </div>
+            <div class="form-group">
+                <label for="girlfriendSavings">Her Savings (RM):</label>
+                <input type="number" id="girlfriendSavings" placeholder="Enter her savings">
+            </div>
+            <button onclick="recordSavings()">Record Savings 📝</button>
+            <button onclick="resetSavings()" class="delete-button">Delete Entry 🗑️</button>
+
+            <!-- Savings Records -->
+            <h2>📊 Savings Records</h2>
+            <table id="savingsTable">
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Your Savings (RM)</th>
+                        <th>Her Savings (RM)</th>
+                        <th>Total (RM)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be added here dynamically -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Vacation Strategy -->
+        <div class="vacation-strategy">
+            <h2>✈️ 4-Day Vacation Strategy</h2>
+            <form id="vacationForm">
+                <div class="form-group">
+                    <label for="accommodation">Where will you stay? 🏨</label>
+                    <input type="text" id="accommodation" placeholder="E.g., Hotel, Airbnb">
+                </div>
+                <div class="form-group">
+                    <label for="activities">Where will you go? 🎡</label>
+                    <textarea id="activities" placeholder="E.g., Beach, Hiking, Shopping"></textarea>
+                </div>
+                <button type="button" onclick="saveStrategy()">Save Strategy 📝</button>
+                <button type="button" onclick="resetStrategy()" class="delete-button">Delete Strategy 🗑️</button>
+            </form>
+
+            <!-- Strategy Results -->
+            <div id="strategyResults"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
